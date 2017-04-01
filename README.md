@@ -7,7 +7,7 @@ You have to include <b>RAhtmlParser.php</b> into your code,
 
 And then just call
 
-<i><code>addCustomHTML($section, $htmlcode, $fullHTML = false);</code></i>
+<i><code>RAhtmlParser::addCustomHTML($section, $htmlcode, $fullHTML = false);</code></i>
 
 <span style="color: red;">where</span> <br />
     `$section` is a PHPWord section <br />
