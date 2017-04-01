@@ -7,7 +7,7 @@ require_once("RAhtmlParser.php");
 
 We just need to call
 
-addCustomHTML($section, $htmlcode, $fullHTML = false);
+<code>addCustomHTML($section, $htmlcode, $fullHTML = false);</code>
 
 where <br />
     $section is a PHPWord section <br />
