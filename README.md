@@ -16,8 +16,16 @@ And then just call
 
 
 If you are use <b>CKEditor</b> you must start it with the follow config.js settings<br />
-<code>
-    config.htmlEncodeOutput = false;<br />
-    config.entities = false;
-</code>
+<code>config.htmlEncodeOutput = false;
+<code>config.entities = false;</code>
 
+all you have to do is to add this line right after `CKEDITOR.editorConfig = function( config ) {` line or you can start CKEditor with a preconfigured instance like this:
+
+<code>
+CKEDITOR.replace(
+	                'articlecontent', // which is an example of field that can contain html text
+	                {
+	                	htmlEncodeOutput: false,
+                        entities: false
+                    }
+</code>
