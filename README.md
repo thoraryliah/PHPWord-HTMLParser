@@ -12,4 +12,4 @@ We just need to call
 <span style="color: red;">where</span> <br />
     `$section` is a PHPWord section <br />
     `$htmlcode` contain html to be added to our docx file
-    $fullHTML set to true only when we have &lt;html&gt; and &lt;body&gt; tags inside the `$htmlcode`
+    `$fullHTML` set to true only when we have &lt;html&gt; and &lt;body&gt; tags inside the `$htmlcode`
