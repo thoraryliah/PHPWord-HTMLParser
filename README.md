@@ -22,10 +22,7 @@ If you are use <b>CKEditor</b> you must start it with the follow config.js setti
 all you have to do is to add this line right after `CKEDITOR.editorConfig = function( config ) {` line or you can start CKEditor with a preconfigured instance like this:
 
 <code>
-CKEDITOR.replace(
-	                'articlecontent', // which is an example of field that can contain html text
-	                {
-	                	htmlEncodeOutput: false,
-                        entities: false
-                    }
+<script>
+CKEDITOR.replace('articlecontent', /* which is an example of field that can contain html text */ { htmlEncodeOutput: false, entities: false });
+</script>
 </code>
