@@ -3,11 +3,11 @@ This project is an alternative (a good one) to addHTML method from PHPWord packa
 
 All you need to do is to include RAhtmlParser.php into your php code.
 
-require_once("RAhtmlParser.php");
+<code>require_once("RAhtmlParser.php");</code>
 
 We just need to call
 
-<code>addCustomHTML($section, $htmlcode, $fullHTML = false);</code>
+<code color="red">addCustomHTML($section, $htmlcode, $fullHTML = false);</code>
 
 where <br />
     $section is a PHPWord section <br />
