@@ -11,7 +11,7 @@
   
   // paragraph style settings
   // the code support only one paragraph style by indeed support to be updated with mulpliple styles
-  $pStyle = array(
+  $__pStyle = array(
     'alignment' => 'both', 
     'spaceAfter' => 0, 
     'spaceBefore' => 0, 
