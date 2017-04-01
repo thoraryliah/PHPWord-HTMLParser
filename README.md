@@ -9,7 +9,7 @@ We just need to call
 
 addCustomHTML($section, $htmlcode, $fullHTML = false);
 
-where
-    $section is a PHPWord section
+where <br />
+    $section is a PHPWord section <br />
     $htmlcode contain html to be added to our docx file
-    $fullHTML set to true only when we have <html> and <body> tags inside the $htmlcode
+    $fullHTML set to true only when we have &lt;html&gt; and <body> tags inside the $htmlcode
