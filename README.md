@@ -15,7 +15,7 @@ And then just call
     `$fullHTML` set to true only when we have &lt;html&gt; and &lt;body&gt; tags inside the `$htmlcode`
 
 
-If you are use CKEditor you must start it with the follow config.js settings
+If you are use <b>CKEditor</b> you must start it with the follow config.js settings<br />
 <code>
     config.htmlEncodeOutput = false;<br />
     config.entities = false;
