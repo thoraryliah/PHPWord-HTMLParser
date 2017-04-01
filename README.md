@@ -10,6 +10,6 @@ We just need to call
 <code>addCustomHTML($section, $htmlcode, $fullHTML = false);</code>
 
 <span style="color: red;">where</span> <br />
-    $section is a PHPWord section <br />
-    $htmlcode contain html to be added to our docx file
+    `$section` is a PHPWord section <br />
+    `$htmlcode` contain html to be added to our docx file
     $fullHTML set to true only when we have &lt;html&gt; and &lt;body&gt; tags inside the `$htmlcode`
