@@ -9,6 +9,15 @@
   
   // the code
   
+  // paragraph style settings
+  // the code support only one paragraph style by indeed support to be updated with mulpliple styles
+  $pStyle = array(
+    'alignment' => 'both', 
+    'spaceAfter' => 0, 
+    'spaceBefore' => 0, 
+    'hanging' => 0
+  );
+
   /**
   *
   * This method try to find text formating tags as <strong>, <b>, <em>, <i>, <u>, <strike>, <sub>, <sup> and
@@ -126,18 +135,10 @@
   * 
   */
   function parseHTML($node, $textrun, $section) {
-    $pStyle = array(
-        'alignment' => 'both', 'spaceAfter' => 0, 'spaceBefore' => 0, 'hanging' => 0
-    );
-    
-    // if we have an <br /> node we must go to the next line
-    if ($node->nodeName == 'br'){
-      $textrun = $section->addTextRun($pStyle);
-    }
-    
-    // again, we make the same operation for an <p> tag or we can modify this for a <div> tag too
-    if ($node->nodeName == 'p'){
-      $textrun = $section->addTextRun($pStyle);
+    // if we have an <br /> or <p> node we must go to the next line
+    // we can include <div> too
+    if (in_array($node->nodeName, array('br', 'p')) {
+      $textrun = $section->addTextRun($__pStyle);
     }
     
     if ($node->hasChildNodes()) {
@@ -151,7 +152,7 @@
           $cStyle = retrieveStyles($parentNode, $cStyle); // this line can be commented
           $cStyle = searchForParentsStyles($parentNode, $cStyle);
           
-          $textrun->addText($childNode->nodeValue, $cStyle, $pStyle);
+          $textrun->addText($childNode->nodeValue, $cStyle, $__pStyle);
         }
         parseHTML($childNode, $textrun, $section);
       }
@@ -181,11 +182,11 @@
     $dom->loadHTML('<?xml encoding="UTF-8">' . $html);
     $dom->preserveWhiteSpace = true;
     
-    $textrun = $section->addTextRun(['alignment' => 'both', 'spaceAfter' => 0, 'spaceBefore' => 0, 'hanging' => 0]);
+    $textrun = $section->addTextRun($__pStyle);
     
     parseHTML($dom->getElementsByTagName('*')->item(1), $textrun, $section);
     
-    $section->addText("", [], ['alignment' => 'both', 'spaceAfter' => 0, 'spaceBefore' => 0, 'hanging' => 0]);
+    $section->addText("", [], $__pStyle);
   }
   
 ?>
