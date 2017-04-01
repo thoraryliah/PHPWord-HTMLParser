@@ -15,8 +15,9 @@ And then just call
     `$fullHTML` set to true only when we have &lt;html&gt; and &lt;body&gt; tags inside the `$htmlcode`
 
 
-<p style="color: blue;">
 If you are use CKEditor you must start it with the follow config.js settings
-	<code>config.htmlEncodeOutput = false;<br />
-    config.entities = false;</code>
-</p>
+<code>
+    config.htmlEncodeOutput = false;<br />
+    config.entities = false;
+</code>
+
