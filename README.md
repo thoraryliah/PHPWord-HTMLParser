@@ -7,9 +7,9 @@ All you need to do is to include RAhtmlParser.php into your php code.
 
 We just need to call
 
-<code color="red">addCustomHTML($section, $htmlcode, $fullHTML = false);</code>
+<code>addCustomHTML($section, $htmlcode, $fullHTML = false);</code>
 
-where <br />
+<span style="color: red;">where</span> <br />
     $section is a PHPWord section <br />
     $htmlcode contain html to be added to our docx file
-    $fullHTML set to true only when we have &lt;html&gt; and <body> tags inside the $htmlcode
+    $fullHTML set to true only when we have &lt;html&gt; and &lt;body&gt; tags inside the `$htmlcode`
