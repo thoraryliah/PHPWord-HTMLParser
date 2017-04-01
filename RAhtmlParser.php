@@ -17,6 +17,7 @@
   * 
   * see http://phpword.readthedocs.io/en/latest/styles.html#font for further informations
   * 
+  * @method retrieveStyles($parentNode, $cStyle)
   * @param $parentNode - a DOM node from DOMDocument
   * @param $cStyle = array() -- of styles
   * @return $cStyle, array()
@@ -102,6 +103,7 @@
   * This method doesn't know how to interpret font-weight, font-name (and others) because this issues are not implemented.
   * You can add this interpretation in retrieveStyles function described before.
   * 
+  * @method searchForParentsStyles($node, $cStyle)
   * @param $node, DOM node form DOMDocument
   * @param $cStyle, array() of styles
   * @return $cStyle, array()
@@ -117,7 +119,7 @@
   }
   
   /**
-  * 
+  * @method parseHTML($node, $textrun, $section) {
   * @param $node, DOM node from DOMDocument
   * @param @textrun, represent a PHPWord textrun which can put in our document excerpts of text with different styles and settings
   * @param @section, represent a PHPWord section
@@ -145,8 +147,8 @@
           $parentNode = $childNode->parentNode; 
           
           // we need to do this kind of search because of XML_TEXT_NODE step
-          // in fact every on every step, in this if statement we have XML_TEXT_NODE nodeType
-          $cStyle = retrieveStyles($parentNode, $cStyle);
+          // in fact on every step, in this if statement, we have XML_TEXT_NODE nodeType
+          $cStyle = retrieveStyles($parentNode, $cStyle); // this line can be commented
           $cStyle = searchForParentsStyles($parentNode, $cStyle);
           
           $textrun->addText($childNode->nodeValue, $cStyle, $pStyle);
@@ -157,7 +159,7 @@
   }
   
   /**
-  * method
+  * @method addCustomHTML($section, $html, $fullHTML = false)
   * @param $secion, is a PHPWord section
   * @param $html represent the html code that we want to convert and insert into docx file.
   * @fullHTML = false is required only if we have an entire full html document
