@@ -1,7 +1,7 @@
 # PHPWord-HTMLParser
 This project is an alternative (a good one) to addHTML method from PHPWord package.
 
-All you need to do is to include RAhtmlParser.php into your php code.
+All you need to do is to include <b>RAhtmlParser.php</b> into your php code.
 
 <code>require_once("RAhtmlParser.php");</code>
 
