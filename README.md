@@ -13,3 +13,10 @@ And then just call
     `$section` is a PHPWord section <br />
     `$htmlcode` contain html to be added to our docx file <br />
     `$fullHTML` set to true only when we have &lt;html&gt; and &lt;body&gt; tags inside the `$htmlcode`
+
+
+<p style="color: blue;">
+If you are use CKEditor you must start it with the follow config.js settings
+	<code>config.htmlEncodeOutput = false;<br />
+    config.entities = false;</code>
+</p>
