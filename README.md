@@ -16,7 +16,7 @@ And then just call
 
 
 If you are use <b>CKEditor</b> you must start it with the follow config.js settings<br />
-<code>config.htmlEncodeOutput = false;
+<code>config.htmlEncodeOutput = false;</code><br />
 <code>config.entities = false;</code>
 
 all you have to do is to add this line right after `CKEDITOR.editorConfig = function( config ) {` line or you can start CKEditor with a preconfigured instance like this:
