@@ -19,7 +19,7 @@ If you are use <b>CKEditor</b> you must start it with the follow config.js setti
 <code>config.htmlEncodeOutput = false;</code><br />
 <code>config.entities = false;</code>
 
-all you have to do is to add this line right after <i>`CKEDITOR.editorConfig = function( config ) {`</i> line or you can start CKEditor with a preconfigured instance like this:
+all you have to do is to add this lines right after <i>`CKEDITOR.editorConfig = function( config ) {`</i> line or you can start CKEditor with a preconfigured instance like this:
 
 <code>
 <script>
